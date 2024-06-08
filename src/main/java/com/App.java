@@ -5,6 +5,8 @@ import com.bean.StudentBean;
 import com.bean.AddressBean;
 import com.bean.AuthorBean;
 import com.bean.BookBean;
+import com.bean.DepartmentBean;
+import com.bean.EmployeeBean;
 /**
  * Hello world!
  *
@@ -45,6 +47,18 @@ public class App
     	System.out.println(book1);
     	System.out.println(book2);
     	
+//    	EmployeeBean emp = new EmployeeBean();
+//    	emp.setEmpName("Rock");
+//    	emp.setGender("male");
+//    	
+//    	DepartmentBean dept = new DepartmentBean();
+//    	dept.setDeptName("Management");
+//    	emp.setDepartment(dept);
+    	
+    	EmployeeBean emp = context.getBean("employeeBean", EmployeeBean.class);
+    	DepartmentBean dept = context.getBean("departmentBean",DepartmentBean.class);
+    	System.out.println(emp);
+    	System.out.println(dept);
     	
     	//        System.out.println( "Hello World!" );
     }

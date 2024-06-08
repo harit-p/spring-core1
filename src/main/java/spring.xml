@@ -15,5 +15,13 @@
     <bean id="bookBean" class="com.bean.BookBean">
     	<constructor-arg ref="authorBean"></constructor-arg>
     </bean>
+    
+    <bean id="departmentBean" class="com.bean.DepartmentBean"></bean>
+    
+    <bean id="employeeBean" class="com.bean.EmployeeBean">
+    	<property name="empName" value="rock"></property>
+	    <property name="gender" value="male"></property>
+	   	<property name="department" ref="departmentBean"></property>
+    </bean>
 
 </beans>
